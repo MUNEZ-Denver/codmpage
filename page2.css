@@ -12,7 +12,7 @@ body {
     background: linear-gradient(135deg, #2c003e, #120015);
     color: white;
     min-height: 100vh;
-    padding: 0 60px;
+    padding: 20px 60px 60px 60px;  
 }
 
 .navbar {
@@ -107,6 +107,6 @@ body {
         margin-top: 20px;
     }
 
-    .container {
-     padding: 40px 60px 0 60px;;
+.container {
+    padding: 40px 60px; 
 }
