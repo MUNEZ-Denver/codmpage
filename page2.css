@@ -1,15 +1,74 @@
-.page {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.left-section,
-.top-right,
-.bottom-left,
-.bottom-right {
-    flex: 1 1 45%;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background: linear-gradient(135deg, #2c003e, #120015);
+    color: white;
+    min-height: 100vh;
+    padding: 20px 60px 60px 60px;
+}
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+}
+
+.page {
+    width: 100%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+}
+
+.left-section {
+    grid-column: 1 / 2;
+}
+
+.small-heading {
+    color: #d4a3ff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.left-section h1 {
+    font-size: 48px;
+    color: #e69cff;
+    margin-bottom: 10px;
+}
+
+.left-section h2 {
+    font-size: 34px;
+    color: #e69cff;
+    font-weight: 600;
 }
 
 .top-right img,
@@ -18,21 +77,23 @@
     border-radius: 8px;
 }
 
+.bottom-right {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 .bottom-right p {
     margin-bottom: 15px;
-    color: #ffffff;
 }
 
 .bottom-right strong {
     color: #ffffff;
 }
 
+
 @media (max-width: 900px) {
-    .left-section,
-    .top-right,
-    .bottom-left,
-    .bottom-right {
-        flex: 1 1 100%;
+    .page {
+        grid-template-columns: 1fr;
     }
 
     .left-section h1 {
@@ -43,8 +104,18 @@
         font-size: 24px;
     }
 
-    .container {
-        padding: 20px 30px;
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+        margin-top: 20px;
+    }
+
+    .background {
+        padding: 20px 30px 40px 30px;
+    }
+
+    .navbar a {
+        flex: 100%;
     }
 }
 
@@ -57,11 +128,15 @@
         font-size: 20px;
     }
 
-    .container {
-        padding: 15px 20px;
+    .small-heading {
+        font-size: 14px;
     }
 
-    .bottom-right p {
+    .bottom-right {
         font-size: 13px;
+    }
+
+    .background {
+        padding: 15px 20px 30px 20px;
     }
 }
