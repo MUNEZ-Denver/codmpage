@@ -12,12 +12,13 @@ body {
   background: linear-gradient(135deg, #2c003e, #120015);
   color: white;
   min-height: 100vh;
-  padding: 20px 60px 60px; /* simplified padding shorthand */
+  padding: 20px 60px 60px;
 }
 
 .navbar {
   background-color: #333;
   overflow: hidden;
+  height: 40px;
 }
 
 .navbar a {
@@ -25,7 +26,9 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 8px 20px;
+  line-height: 24px;
+  transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -107,7 +110,7 @@ body {
     margin-top: 20px;
   }
 
-  .background { 
+  .background {
     padding: 40px 60px;
   }
 }
