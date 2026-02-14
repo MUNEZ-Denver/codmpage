@@ -106,3 +106,7 @@ body {
     .bottom-right {
         margin-top: 20px;
     }
+
+    .container {
+    padding: 40px 60px;
+}
